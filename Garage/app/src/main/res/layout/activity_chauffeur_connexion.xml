@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.ChauffeurConnexion">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="50dp"
+        android:text="Connexion Chauffeur"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textColor="@color/gradStart"
+        android:ems="10"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:textSize="20sp"
+        android:drawablePadding="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </TextView>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:id="@+id/email"
+        android:layout_height="60dp"
+        android:hint="mail"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="150dp"
+        android:background="@drawable/custom_input"
+
+        android:ems="10"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:textSize="15sp"
+        android:inputType="textEmailAddress"
+        android:drawablePadding="12dp"
+        android:drawableLeft="@drawable/custom_email_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/motdepasse"
+        android:hint="password"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:drawablePadding="12dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/custom_input"
+        android:textColor="@android:color/darker_gray"
+        android:ems="10"
+        android:textSize="15sp"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/email"
+        android:drawableLeft="@drawable/custom_lock_icon" />
+
+
+
+
+    <Button
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="90dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Connection"
+        android:textColor="@color/white"
+        android:layout_gravity="center"
+        android:id="@+id/connectionr"
+        android:onClick="connection"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/motdepasse"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

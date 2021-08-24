@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back2"
+    tools:context=".activities.AdminPage">
+
+    <LinearLayout
+
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/nametv"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:textStyle="bold"
+                android:textColor="#FFF"
+                android:textSize="24dp">
+
+            </TextView>
+
+            <ImageView
+                android:layout_alignParentRight="true"
+                android:src="@drawable/admin"
+                android:background="@drawable/circle_border"
+                android:layout_width="92dp"
+                android:layout_marginTop="2dp"
+                android:padding="3dp"
+                android:layout_height="92dp">
+
+            </ImageView>
+
+        </RelativeLayout>
+
+        <GridLayout
+            android:id="@+id/lila"
+            android:layout_marginTop="50dp"
+            android:columnCount="2"
+            android:rowCount="4"
+            android:alignmentMode="alignMargins"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <androidx.cardview.widget.CardView
+                android:onClick="AjouterChauffeur"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                app:cardElevation="6dp"
+                app:cardCornerRadius="12dp"
+                android:layout_margin="12dp">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:src="@drawable/chauffeuradd"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp">
+
+                    </ImageView>
+
+                    <TextView
+                        android:textColor="#6f6f6f"
+                        android:layout_marginTop="12dp"
+                        android:textSize="12dp"
+                        android:text="Ajouter Chauffeur"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                    </TextView>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:onClick="AttribueMission"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                app:cardElevation="6dp"
+                app:cardCornerRadius="12dp"
+                android:layout_margin="12dp">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:src="@drawable/missionadd"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp">
+
+                    </ImageView>
+
+                    <TextView
+                        android:textColor="#6f6f6f"
+                        android:layout_marginTop="12dp"
+                        android:textSize="12dp"
+                        android:text="Ajouter mission"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                    </TextView>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:onClick="ConsulterChauffeur"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                app:cardElevation="6dp"
+                app:cardCornerRadius="12dp"
+                android:layout_margin="12dp">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:src="@drawable/chauffeur"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp">
+
+                    </ImageView>
+
+                    <TextView
+                        android:textColor="#6f6f6f"
+                        android:layout_marginTop="12dp"
+                        android:textSize="12dp"
+                        android:text="Consulter Chauffeur"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                    </TextView>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:onClick="ConsulterMission"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                app:cardElevation="6dp"
+                app:cardCornerRadius="12dp"
+                android:layout_margin="12dp">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:src="@drawable/mession"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp">
+
+                    </ImageView>
+
+                    <TextView
+                        android:textColor="#6f6f6f"
+                        android:layout_marginTop="12dp"
+                        android:textSize="12dp"
+                        android:text="Consulter mission"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                    </TextView>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:onClick="AjouterVehicule"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                app:cardElevation="6dp"
+                app:cardCornerRadius="12dp"
+                android:layout_margin="12dp">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:src="@drawable/vehiculeadd"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp">
+
+                    </ImageView>
+
+                    <TextView
+                        android:textColor="#6f6f6f"
+                        android:layout_marginTop="12dp"
+                        android:textSize="12dp"
+                        android:text="Ajouter Vehicule"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                    </TextView>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:onClick="ConsulterVehicule"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                app:cardElevation="6dp"
+                app:cardCornerRadius="12dp"
+                android:layout_margin="12dp">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:src="@drawable/vehicule"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp">
+
+                    </ImageView>
+
+                    <TextView
+                        android:textColor="#6f6f6f"
+                        android:layout_marginTop="12dp"
+                        android:textSize="12dp"
+                        android:text="Consulter Vehicule"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                    </TextView>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+
+        <androidx.cardview.widget.CardView
+            android:onClick="ConsulterParking"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            app:cardElevation="6dp"
+            app:cardCornerRadius="12dp"
+            android:layout_margin="12dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:src="@drawable/parking"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp">
+
+                </ImageView>
+
+                <TextView
+                    android:textColor="#6f6f6f"
+                    android:layout_marginTop="12dp"
+                    android:textSize="12dp"
+                    android:text="Consulter Parking"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:onClick="ConsulterAlerts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                app:cardElevation="6dp"
+                app:cardCornerRadius="12dp"
+                android:layout_margin="12dp">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/newAlert"
+                        android:visibility="gone"
+                        android:src="@drawable/ic_new_info"
+                        android:paddingLeft="100dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true" />
+
+                    <ImageView
+                        android:src="@drawable/alerte"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp">
+
+                    </ImageView>
+
+                    <TextView
+                        android:textColor="#6f6f6f"
+                        android:layout_marginTop="12dp"
+                        android:textSize="12dp"
+                        android:text="Consulter Alerts"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                    </TextView>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:onClick="ConsulterNotif"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                app:cardElevation="6dp"
+                app:cardCornerRadius="12dp"
+                android:layout_margin="12dp">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/newNotif"
+                        android:visibility="gone"
+                        android:src="@drawable/ic_new_info"
+                        android:paddingLeft="100dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true" />
+
+                    <ImageView
+                        android:src="@drawable/notif"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp">
+
+                    </ImageView>
+
+                    <TextView
+                        android:textColor="#6f6f6f"
+                        android:layout_marginTop="12dp"
+                        android:textSize="12dp"
+                        android:text="Consulter Notifs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                    </TextView>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+        </GridLayout>
+
+        <Button
+            android:id="@+id/buttonlogout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="120dp"
+            android:text="Deconnecter"
+            android:layout_marginTop="15dp"
+            app:layout_constraintTop_toTopOf= "@+id/lila"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+        </Button>
+
+    </LinearLayout>
+
+</ScrollView>

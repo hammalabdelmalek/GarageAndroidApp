@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".Views.MissionView">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rellay1"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/grad"
+        android:paddingBottom="20dp">
+
+        <TextView
+            android:id="@+id/titre"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="le titre de la mission"
+            android:textStyle="bold"
+            android:textSize="30dp">
+        </TextView>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rellay1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            android:visibility="visible"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Etat de la mission"
+                    android:textColor="@color/headings"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/etat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="etat de la mission"
+                    android:textColor="#000000"
+                    android:textSize="18dp">
+                </TextView>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/grey" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Adresse de depart"
+                    android:textColor="@color/headings"
+                    android:textSize="13sp" />RelativeLayout
+
+                <TextView
+                    android:id="@+id/tv_address1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="l'adresse de depart de la mission"
+                    android:textColor="#000000"
+                    android:textSize="18dp">
+                </TextView>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/grey" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Adresse d'arrivée"
+                    android:textColor="@color/headings"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_address2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="l'adresse d'arrivéé de la mission "
+                    android:textColor="#000000"
+                    android:textSize="18dp">
+                </TextView>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/grey" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Chauffeur"
+                    android:textColor="@color/headings"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_chauffeur"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Chauffeur de la mission"
+                    android:textColor="#000000"
+                    android:textSize="18dp">
+                </TextView>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/grey" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Vehicule"
+                    android:textColor="@color/headings"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_vehicule"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="vehicule de la mission"
+                    android:textColor="#000000"
+                    android:textSize="18dp">
+                </TextView>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/grey" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Kilometrage"
+                    android:textColor="@color/headings"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_kilometrage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="kilometrage de la mission"
+                    android:textColor="#000000"
+                    android:textSize="18dp">
+                </TextView>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/grey" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Consomation de caerburant"
+                    android:textColor="@color/headings"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_consomation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Consomation de carburant durant la mission"
+                    android:textColor="#000000"
+                    android:textSize="18dp">
+                </TextView>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/grey" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Date de mission"
+                    android:textColor="@color/headings"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_debut"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Date de mission"
+                    android:textColor="#000000"
+                    android:textSize="18dp">
+                </TextView>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/grey" />
+
+            </LinearLayout>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Note de 1 à 5"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/custom_input"
+                android:padding="5dp"
+                android:visibility="gone"
+                android:id="@+id/et_note">
+            </EditText>
+
+
+            <Button
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Noter Mission"
+                android:visibility="gone"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/white"
+                android:background="@color/orange"
+                android:layout_gravity="center"
+                android:id="@+id/Noter"
+                app:backgroundTint="@null"
+                />
+
+            <Button
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Annuler"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/white"
+                android:background="@color/red"
+                android:layout_gravity="center"
+                android:id="@+id/Delete"
+                app:backgroundTint="@null"
+                />
+
+            <Button
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Modifier"
+                android:textColor="@android:color/white"
+                app:backgroundTint="@null"
+                android:background="@drawable/grad"
+                android:layout_gravity="center"
+                android:id="@+id/Update"
+                />
+
+            <Button
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Commencer"
+                android:textColor="@android:color/white"
+                app:backgroundTint="@null"
+                android:background="@color/green"
+                android:layout_gravity="center"
+                android:id="@+id/Start"
+                />
+
+            <Button
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mission Terminer"
+                android:textColor="@android:color/white"
+                app:backgroundTint="@null"
+                android:background="@color/green"
+                android:visibility="gone"
+                android:layout_gravity="center"
+                android:id="@+id/End"
+                />
+
+            <Button
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Maps"
+                android:onClick="Maps"
+                android:textColor="@android:color/white"
+                app:backgroundTint="@null"
+                android:background="@color/green"
+                android:layout_gravity="center"
+                android:id="@+id/Map"
+                />
+
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>
+
+</ScrollView>

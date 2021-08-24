@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.AjouteVehicule">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="50dp"
+        android:text="Ajout Vehicule"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textColor="@color/gradStart"
+        android:ems="10"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:textSize="20sp"
+        android:drawablePadding="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </TextView>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:id="@+id/titre"
+        android:layout_height="60dp"
+        android:hint="Type du vehicule"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/custom_input"
+        android:ems="10"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:textSize="15sp"
+        android:drawablePadding="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:id="@+id/marque"
+            android:hint="Marque du vehicule"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:drawablePadding="12dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/custom_input"
+            android:textColor="@android:color/darker_gray"
+            android:ems="10"
+            android:textSize="15sp"
+            android:inputType="textEmailAddress"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.8"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/titre"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:id="@+id/modele"
+            android:hint="Modele du vehicule"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:drawablePadding="12dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/custom_input"
+            android:textColor="@android:color/darker_gray"
+            android:ems="10"
+            android:textSize="15sp"
+            android:inputType="textEmailAddress"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.8"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/titre"
+            />
+
+
+
+        <EditText
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/anneeSerculation"
+        android:hint="Matricule du vehicule"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:drawablePadding="12dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/custom_input"
+        android:textColor="@android:color/darker_gray"
+        android:ems="10"
+        android:textSize="15sp"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/titre"
+        />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:id="@+id/nbr_place"
+            android:hint="Nombre de place"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:drawablePadding="12dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/custom_input"
+            android:textColor="@android:color/darker_gray"
+            android:ems="10"
+            android:textSize="15sp"
+            android:inputType="textEmailAddress"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.8"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/anneeSerculation"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:id="@+id/consomation"
+            android:hint="Consomation de carburant"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:drawablePadding="12dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/custom_input"
+            android:textColor="@android:color/darker_gray"
+            android:ems="10"
+            android:textSize="15sp"
+            android:inputType="textEmailAddress"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.8"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/anneeSerculation"
+            />
+
+
+        <EditText
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/controle"
+        android:hint="Date fin du controle technique"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:drawablePadding="12dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/custom_input"
+        android:textColor="@android:color/darker_gray"
+        android:ems="10"
+        android:textSize="15sp"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/anneeSerculation"
+        />
+
+    <Button
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ajouter"
+        android:textColor="@color/white"
+        app:layout_constraintCircleRadius="12dp"
+        android:layout_gravity="center"
+        android:id="@+id/Ajout"
+        android:onClick="AddVehicule"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/controle"/>
+
+        <Button
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Modifier"
+            android:textColor="@color/white"
+            app:layout_constraintCircleRadius="12dp"
+            android:layout_gravity="center"
+            android:id="@+id/Update"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/controle"/>
+
+        <Button
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Renouvler"
+            android:textColor="@color/white"
+            app:layout_constraintCircleRadius="12dp"
+            android:layout_gravity="center"
+            android:id="@+id/Renouvler"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/controle"/>
+
+    </LinearLayout>
+
+</ScrollView>

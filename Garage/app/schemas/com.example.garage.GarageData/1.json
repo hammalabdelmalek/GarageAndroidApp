@@ -1,0 +1,416 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "32efc07cfe5da2e5b6df231f1df11af6",
+    "entities": [
+      {
+        "tableName": "User",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `name` TEXT NOT NULL, `mail` TEXT NOT NULL, `password` TEXT NOT NULL, `telephone` TEXT NOT NULL, `ville` TEXT NOT NULL, `nbrMission` INTEGER NOT NULL, `kilometrage` INTEGER NOT NULL, `note` REAL NOT NULL, `type` INTEGER NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "mail",
+            "columnName": "mail",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "password",
+            "columnName": "password",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "telephone",
+            "columnName": "telephone",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "ville",
+            "columnName": "ville",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "nbrMission",
+            "columnName": "nbrMission",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "kilometrage",
+            "columnName": "kilometrage",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "note",
+            "columnName": "note",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "type",
+            "columnName": "type",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [
+          {
+            "name": "index_User_mail",
+            "unique": true,
+            "columnNames": [
+              "mail"
+            ],
+            "createSql": "CREATE UNIQUE INDEX IF NOT EXISTS `index_User_mail` ON `${TABLE_NAME}` (`mail`)"
+          }
+        ],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "Mission",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `title` TEXT NOT NULL, `adreesseDebut` TEXT NOT NULL, `adresseFin` TEXT NOT NULL, `dateDebut` TEXT NOT NULL, `dateLimit` TEXT NOT NULL, `chauffaurId` INTEGER NOT NULL, `chauffaur` TEXT NOT NULL, `vehiculeId` INTEGER NOT NULL, `note` INTEGER NOT NULL, `kilometrage` REAL NOT NULL, `etat` INTEGER NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "title",
+            "columnName": "title",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "adreesseDebut",
+            "columnName": "adreesseDebut",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "adresseFin",
+            "columnName": "adresseFin",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "dateDebut",
+            "columnName": "dateDebut",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "dateLimit",
+            "columnName": "dateLimit",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "chauffaurId",
+            "columnName": "chauffaurId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "chauffaur",
+            "columnName": "chauffaur",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "vehiculeId",
+            "columnName": "vehiculeId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "note",
+            "columnName": "note",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "kilometrage",
+            "columnName": "kilometrage",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "etat",
+            "columnName": "etat",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "Parking",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `vehiculeId` INTEGER NOT NULL, `etat` INTEGER NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "vehiculeId",
+            "columnName": "vehiculeId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "etat",
+            "columnName": "etat",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "Vehicule",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `titre` TEXT NOT NULL, `marque` TEXT NOT NULL, `modele` TEXT NOT NULL, `nbrPlace` INTEGER NOT NULL, `consomation` REAL NOT NULL, `anneeSerculation` TEXT NOT NULL, `controleTechnique` TEXT NOT NULL, `etat` INTEGER NOT NULL, `kilometrage` REAL NOT NULL, `parkingId` INTEGER NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "titre",
+            "columnName": "titre",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "marque",
+            "columnName": "marque",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "modele",
+            "columnName": "modele",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "nbrPlace",
+            "columnName": "nbrPlace",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "consomation",
+            "columnName": "consomation",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "anneeSerculation",
+            "columnName": "anneeSerculation",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "controleTechnique",
+            "columnName": "controleTechnique",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "etat",
+            "columnName": "etat",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "kilometrage",
+            "columnName": "kilometrage",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "parkingId",
+            "columnName": "parkingId",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [
+          {
+            "name": "index_Vehicule_anneeSerculation",
+            "unique": true,
+            "columnNames": [
+              "anneeSerculation"
+            ],
+            "createSql": "CREATE UNIQUE INDEX IF NOT EXISTS `index_Vehicule_anneeSerculation` ON `${TABLE_NAME}` (`anneeSerculation`)"
+          }
+        ],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "Alert",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `title` TEXT NOT NULL, `chauffaurId` INTEGER NOT NULL, `missionId` INTEGER NOT NULL, `vehiculeId` INTEGER NOT NULL, `type` INTEGER NOT NULL, `reponse` TEXT NOT NULL, `isConsulted` INTEGER NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "title",
+            "columnName": "title",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "chauffaurId",
+            "columnName": "chauffaurId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "missionId",
+            "columnName": "missionId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "vehiculeId",
+            "columnName": "vehiculeId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "type",
+            "columnName": "type",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "reponse",
+            "columnName": "reponse",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "isConsulted",
+            "columnName": "isConsulted",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "Notif",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `desc` TEXT NOT NULL, `vehiculeId` INTEGER NOT NULL, `type` INTEGER NOT NULL, `date` TEXT NOT NULL, `visibility` INTEGER NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "desc",
+            "columnName": "desc",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "vehiculeId",
+            "columnName": "vehiculeId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "type",
+            "columnName": "type",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "date",
+            "columnName": "date",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "visibility",
+            "columnName": "visibility",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '32efc07cfe5da2e5b6df231f1df11af6')"
+    ]
+  }
+}

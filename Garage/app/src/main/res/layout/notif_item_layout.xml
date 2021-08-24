@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="5dp"
+    app:cardUseCompatPadding="true"
+    app:cardBackgroundColor="@android:color/white">
+
+    <RelativeLayout
+        android:onClick="Change"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:background="?android:selectableItemBackground"
+        android:focusable="true"
+        android:padding="8dp">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_alignParentStart="true"
+            android:padding="5dp"
+            android:layout_alignParentLeft="true">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="titre de l'alert"
+                android:textStyle="bold"
+                android:textSize="26sp"
+                android:textAllCaps="true"/>
+
+            <TextView
+                android:id="@+id/nId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:inputType="number"
+                android:textSize="18sp"/>
+
+
+
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/newAlert"
+            android:src="@drawable/ic_new_info"
+            android:visibility="gone"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

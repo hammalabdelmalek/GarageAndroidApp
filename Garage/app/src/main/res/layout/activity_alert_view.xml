@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".Views.AlertView">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rellay1"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/grad"
+        android:paddingBottom="20dp">
+
+        <TextView
+            android:id="@+id/tv_type"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="type de l'alert : "
+            android:textStyle="bold"
+            android:textSize="30dp">
+        </TextView>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rellay1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            android:visibility="visible"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Chauffeur qui a envoyer l'alert"
+                    android:textColor="@color/headings"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="nom du chauffeur"
+                    android:textColor="#000000"
+                    android:textSize="18dp">
+                </TextView>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/grey" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="L'alert concerne la mission"
+                    android:textColor="@color/headings"
+                    android:textSize="13sp" />RelativeLayout
+
+                <TextView
+                    android:id="@+id/tv_mission"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="titre de la mission"
+                    android:textColor="#000000"
+                    android:textSize="18dp">
+                </TextView>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/grey" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Description du problème"
+                    android:textColor="@color/headings"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Description du problème"
+                    android:textColor="#000000"
+                    android:textSize="18dp">
+                </TextView>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/grey" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="30dp"
+                android:id="@+id/reponselt"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Reponse"
+                    android:textColor="@color/red"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/Reponse"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Pas de reponse pour l'instant"
+                    android:textColor="#000000"
+                    android:textSize="18dp">
+                </TextView>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/grey" />
+
+            </LinearLayout>
+
+            <Button
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Voir Reponse"
+                android:layout_marginTop="30dp"
+                android:textColor="@color/white"
+                android:background="@drawable/grad"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                android:id="@+id/Voir"
+                app:backgroundTint="@null"
+                />
+
+            <Button
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Supprimer"
+                android:layout_marginTop="30dp"
+                android:textColor="@color/white"
+                android:background="@color/red"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                android:id="@+id/Delete"
+                app:backgroundTint="@null"
+                />
+
+
+            <Button
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Repondre"
+                android:layout_marginTop="30dp"
+                android:textColor="@color/white"
+                android:background="@drawable/grad"
+                android:layout_gravity="center"
+                android:id="@+id/Repondre"
+                app:backgroundTint="@null"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="reponse"
+                android:layout_marginTop="30dp"
+                android:visibility="gone"
+                android:background="@drawable/custom_input"
+                android:padding="5dp"
+                android:id="@+id/et_reponse">
+
+            </EditText>
+
+            <Button
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:text="Envoyer"
+                android:layout_marginTop="30dp"
+                android:textColor="@color/white"
+                android:background="@drawable/grad"
+                android:layout_gravity="center"
+                android:id="@+id/Envoyer"
+                app:backgroundTint="@null"
+                />
+
+
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>
+
+</ScrollView>
